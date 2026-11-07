@@ -1,6 +1,6 @@
 # Cafe Management System
 
-Beginner Java web app: Java 21, Maven, Tomcat 9, JSP, Servlets, JDBC and MySQL.
+Beginner Java web app: Java 25 (LTS), Maven, Tomcat 9, JSP, Servlets, JDBC and MySQL.
 
 ## Features
 - Dashboard: product count, order count and total sales
@@ -10,7 +10,7 @@ Beginner Java web app: Java 21, Maven, Tomcat 9, JSP, Servlets, JDBC and MySQL.
 - View order history
 
 ## Requirements
-JDK 21, Maven 3.9+, Apache Tomcat 9.x, MySQL Server 8.x. MySQL Workbench and VS Code/IntelliJ are optional.
+JDK 25 (LTS), Maven 3.9+, Apache Tomcat 9.x, MySQL Server 8.x. MySQL Workbench and VS Code/IntelliJ are optional.
 
 ## Step 1 — Check Java and Maven
 Open PowerShell:
