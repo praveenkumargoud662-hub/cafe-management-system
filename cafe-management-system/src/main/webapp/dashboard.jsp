@@ -1,0 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html><html><head><title>Cafe Dashboard</title><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"></head><body>
+<jsp:include page="nav.jsp"/><main class="container"><h1>Dashboard</h1><p class="muted">Welcome to your Cafe Management System.</p>
+<section class="cards"><div class="card"><span>Products</span><strong>${productCount}</strong></div><div class="card"><span>Orders placed</span><strong>${orderCount}</strong></div><div class="card"><span>Total sales</span><strong>₹ ${totalSales}</strong></div></section>
+<section class="panel"><h2>Quick actions</h2><a class="button" href="${pageContext.request.contextPath}/products">Manage products</a> <a class="button secondary" href="${pageContext.request.contextPath}/orders">Create an order</a></section></main></body></html>

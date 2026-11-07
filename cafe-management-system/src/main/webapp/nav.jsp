@@ -1,0 +1,1 @@
+<header class="topbar"><a class="brand" href="${pageContext.request.contextPath}/dashboard">☕ Cafe Manager</a><nav><a href="${pageContext.request.contextPath}/dashboard">Dashboard</a><a href="${pageContext.request.contextPath}/products">Products</a><a href="${pageContext.request.contextPath}/orders">Orders & Billing</a></nav></header>

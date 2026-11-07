@@ -1,0 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" %><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html><html><head><title>Orders and Billing</title><link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css"></head><body><jsp:include page="nav.jsp"/>
+<main class="container"><h1>Orders & Billing</h1><c:if test="${param.success == '1'}"><p class="success">Order placed successfully.</p></c:if>
+<section class="panel"><h2>Create order</h2><form method="post" action="${pageContext.request.contextPath}/orders" class="form-grid"><label>Product<select name="productId" required><c:forEach var="p" items="${products}"><c:if test="${p.available}"><option value="${p.id}"><c:out value="${p.name}"/> — ₹ ${p.price}</option></c:if></c:forEach></select></label><label>Quantity<input type="number" name="quantity" min="1" max="100" value="1" required></label><button>Place order</button></form></section>
+<section class="panel"><h2>Order history</h2><div class="table-wrap"><table><thead><tr><th>Order ID</th><th>Product</th><th>Qty</th><th>Unit price</th><th>Total bill</th><th>Order time</th></tr></thead><tbody>
+<c:forEach var="o" items="${orders}"><tr><td>${o.id}</td><td><c:out value="${o.productName}"/></td><td>${o.quantity}</td><td>₹ ${o.unitPrice}</td><td><strong>₹ ${o.total}</strong></td><td>${o.orderTime}</td></tr></c:forEach>
+<c:if test="${empty orders}"><tr><td colspan="6">No orders yet.</td></tr></c:if></tbody></table></div></section></main></body></html>
